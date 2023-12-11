@@ -1,0 +1,22 @@
+.form_container {
+  display: flex;
+  width: 100vw;
+}
+
+.picture {
+  flex-grow: 1;
+  min-height: 600px;
+  object-fit: contain;
+  border-radius: 0px 0px 8px 8px;
+  margin: 0;
+}
+
+.form {
+  flex-grow: 1;
+  min-height: 600px;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 0 0 8px 8px;
+  background-color: #fff;
+  margin: 0;
+}
