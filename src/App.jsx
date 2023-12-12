@@ -1,3 +1,4 @@
+// App.jsx
 import React, { useState } from "react";
 import Form from "./components/Form/Form";
 import RegistrationForm from "./components/RegistrationForm/RegistrationForm";
@@ -14,11 +15,24 @@ const App = () => {
     console.log("Form submitted:", formData);
   };
 
+  const handleModalClose = () => {
+    setShowRegistrationForm(false);
+  };
+
   return (
     <div className="form_container">
       <img src="src/assets/exam.png" alt="Exam" className="picture" />
       <Form onSubmit={handleFormSubmit} />
-      {showRegistrationForm && <RegistrationForm />}
+      {showRegistrationForm && (
+        <div className="modal">
+          <div className="modal-content">
+            <button className="close-button" onClick={handleModalClose}>
+             <p>X</p>
+            </button>
+            <RegistrationForm />
+          </div>
+        </div>
+      )}
     </div>
   );
 };

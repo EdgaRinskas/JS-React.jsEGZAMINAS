@@ -1,7 +1,7 @@
 .form_container {
   display: flex;
-  width: 70vw;
-  height: 600px;
+  width: 1100px;
+  height: 100%;
   border: 5px solid #F2877D;
   border-radius: 10px;
 }
@@ -18,9 +18,8 @@
   flex-grow: 1;
   min-width: 300px;
   height: 100%;
-  padding: 20px;
   box-sizing: border-box;
   border-radius: 0 10px 10px 0;
   background-color: #fff;
-  margin: 0;
 }
+

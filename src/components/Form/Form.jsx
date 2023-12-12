@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Form.scss';
+import GoogleLogo from '../../assets/google_logo.png';
+import FacebookLogo from '../../assets/facebook_logo.png';
 
 const Form = ({ onSubmit }) => {
   const [formData, setFormData] = useState({
@@ -32,12 +34,12 @@ const Form = ({ onSubmit }) => {
 
       <div className="button-links">
         <button type="button" className="google-button">
-          Sign Up with Google
-          {/* Include Google logo here */}
+          <img src={GoogleLogo} alt="Google Logo" className="logo" />
+          <p>Sign Up</p>
         </button>
         <button type="button" className="facebook-button">
-          Sign Up with Facebook
-          {/* Include Facebook logo here */}
+          <img src={FacebookLogo} alt="Facebook Logo" className="logo" />
+          <p>Sign Up</p>
         </button>
       </div>
 
