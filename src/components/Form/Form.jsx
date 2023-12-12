@@ -1,3 +1,4 @@
+// Form.jsx
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Form.scss';
@@ -18,8 +19,18 @@ const Form = ({ onSubmit }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Add form validation logic here
+
+    // Form validation logic
+    if (!formData.name || !formData.email || !formData.password) {
+      alert('Please fill in all fields');
+      return;
+    }
+
+    // Call the onSubmit function with the form data
     onSubmit(formData);
+
+    // Alert for successful submission
+    alert('Form submitted successfully!');
   };
 
   return (
@@ -29,17 +40,17 @@ const Form = ({ onSubmit }) => {
       </h1>
       <p>Already have an account?</p>
       <a href="#" style={{ color: 'orange' }}>
-        Log In
+        <p>Log In</p>
       </a>
 
       <div className="button-links">
         <button type="button" className="google-button">
           <img src={GoogleLogo} alt="Google Logo" className="logo" />
-          <p>Sign Up</p>
+          <p>Sign Up with Google</p>
         </button>
         <button type="button" className="facebook-button">
           <img src={FacebookLogo} alt="Facebook Logo" className="logo" />
-          <p>Sign Up</p>
+          <p>Sign Up with Facebook</p>
         </button>
       </div>
 
@@ -78,7 +89,9 @@ const Form = ({ onSubmit }) => {
         </div>
       </div>
 
-      <button type="submit">Submit</button>
+      <button type="submit" className="submit-button">
+        Submit
+      </button>
     </form>
   );
 };
