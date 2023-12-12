@@ -42,11 +42,11 @@ const Form = ({ onSubmit }) => {
       <div className="button-links">
         <button type="button" className="google-button">
           <img src={GoogleLogo} alt="Google Logo" className="logo" />
-          <p>Sign Up with Google</p>
+          <p>Sign Up</p>
         </button>
         <button type="button" className="facebook-button">
           <img src={FacebookLogo} alt="Facebook Logo" className="logo" />
-          <p>Sign Up with Facebook</p>
+          <p>Sign Up</p>
         </button>
       </div>
 
