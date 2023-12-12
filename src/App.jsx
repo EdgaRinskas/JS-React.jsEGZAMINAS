@@ -27,9 +27,9 @@ const App = () => {
         <div className="modal">
           <div className="modal-content">
             <button className="close-button" onClick={handleModalClose}>
-             <p>X</p>
+              <p>X</p>
             </button>
-            <RegistrationForm />
+            <RegistrationForm onSubmit={handleFormSubmit} />
           </div>
         </div>
       )}

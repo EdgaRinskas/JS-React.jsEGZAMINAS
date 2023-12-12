@@ -1,4 +1,3 @@
-// Form.jsx
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import './Form.scss';
@@ -20,16 +19,13 @@ const Form = ({ onSubmit }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Form validation logic
     if (!formData.name || !formData.email || !formData.password) {
       alert('Please fill in all fields');
       return;
     }
 
-    // Call the onSubmit function with the form data
     onSubmit(formData);
 
-    // Alert for successful submission
     alert('Form submitted successfully!');
   };
 
